@@ -1,0 +1,15 @@
+
+replicaCount: 1
+image: nginx:latets
+containerPort: 80
+servicePort: 8080
+serviceType: NodePort
+maxUnavailable: 1
+maxSurge: 1
+resources:
+  requests:
+    cpu: +500m
+    memory: 1Gi
+  limits:
+    memory: 2Gi
+

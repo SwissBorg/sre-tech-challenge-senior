@@ -1,0 +1,12 @@
+piVersion: v1
+kind: Service
+metadata:
+  name: sre-challenge
+spec:
+  type: {{ .Values.serviceType }}
+  selector:
+    app: sre-challenge
+  ports:
+  - protocol: TCP
+    port: {{ .Values.containerPort }}
+    targetPort: {{ .Values.servicePort }}
